@@ -1,0 +1,31 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Search.aspx.cs" Inherits="Search" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div><center>
+        ok sir this is my table list view
+            &nbsp;<br />
+        <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
+        </asp:ListView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:BonBody2 %>" 
+            SelectCommand="SELECT [rname], [rgender], [rgroup], [rmobile], [rfeet], [rcity] FROM [urdata] )">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="ListView1" Name="rcity" 
+                    PropertyName="SelectedValue" Type="String" />
+                <asp:ControlParameter ControlID="ListView1" Name="rgroup" 
+                    PropertyName="SelectedValue" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        </center>
+
+    </div>
+    </form>
+</body>
+</html>

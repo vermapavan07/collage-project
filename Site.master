@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:White;">
+    <form id="form1" runat="server">
+    <div align="center">
+    <div align="left" style="height: 100px; width: 1000px; background-attachment:fixed;  background-color:white;" >
+           
+           
+        <asp:Image ID="Image1" runat="server" Height="100px" Width="270px" 
+            ImageUrl="~/picture/logo.jpg" />
+            
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           
+            <asp:Button ID="Rigister" runat="server" Text="Register"  Font-Size="X-Large"
+               BackColor="Red" BorderColor="Red" BorderStyle="Solid" Height="40px" 
+            Width="115px" ForeColor="White" align="center" PostBackUrl="~/Register.aspx" /> 
+           
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          
+             <asp:Button ID="Login" runat="server" Text="Login" Font-Size="X-Large"
+               BackColor="Red" BorderColor="Red" BorderStyle="Solid" Height="40px" 
+            Width="115px" ForeColor="White" align="center" PostBackUrl="~/Login.aspx" />
+           
+    </div>
+    <hr size="5px" style="background-color:Black; width: 1000px;" 
+        align="center" />
+        <div style="height: 40px; width: 1000px; background-color:Purple">
+
+        &nbsp;
+            <asp:Button ID="Home" runat="server" Height="40px" Text="Home" 
+            Width="75px" BackColor="Red" BorderColor="Red" BorderStyle="Dashed" 
+            Font-Names="Verdana" Font-Size="20px" ForeColor="White" PostBackUrl="~/Home.aspx"/>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Donate" runat="server" Height="40px" Text="Why Donate Blood" 
+            Width="200px" BackColor="Red" BorderColor="Red" BorderStyle="Dashed" 
+            Font-Names="Verdana" Font-Size="20px" ForeColor="White" 
+                PostBackUrl="~/Donate.aspx" onclick="Donate_Click" />
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Need" runat="server" Height="40px" Text="Who Need Blood ?" 
+            Width="200px" BackColor="Red" BorderColor="Red" BorderStyle="Dashed" 
+            Font-Names="Verdana" Font-Size="20px" ForeColor="White" PostBackUrl="~/Need.aspx" />
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Contact" runat="server" Height="40px" Text="Contact Us" 
+            Width="121px" BackColor="Red" BorderColor="Red" BorderStyle="Dashed" 
+            Font-Names="Verdana" Font-Size="20px" ForeColor="White" PostBackUrl="~/Contact.aspx" />
+
+    </div>
+        <hr size="5px" style="background-color:Black; width: 1000px;" 
+        align="center" />
+        <table>
+        <tr>
+        <td>
+    <div style="height: 693px; width: 716px" align="left">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">   
+      
+        </asp:ContentPlaceHolder>
+    </div>
+    </td>
+    <td>
+    <div  style="height: 696px; width: 275px; font-size: 20px; font-family: verdana;">
+        <asp:Image ID="Image2" runat="server" Height="388px" Width="277px" 
+            ImageUrl="~/picture/blood2.jpg"  />
+        <br />
+            <font style="font: bold 34px 'Times New Roman'; color: rgb(28, 97, 119);">
+            Are you ready to save a life?</font><br />
+            <br />
+            BonBody.com  is a non-profit, non-commercial interface was born out of our social commitment and our desire to use the power of the Internet to help common people.
+        </div></td>
+    </tr>
+    </table>
+        <hr size="5px" style="background-color:Black; width: 1000px;" 
+        align="center" />
+   <div>
+    <center>Copyright © bonbody.com. 2018. All rights reserved.</center></div>
+        <hr size="5px" style="background-color:Black; width: 1000px;" 
+        align="center" />
+    </div>
+    </form>
+    </body>
+</html>
